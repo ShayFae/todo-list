@@ -6,9 +6,12 @@ export default function List() {
   const [add, setAdd] = useState('');
   const [count, setCount] = useState(0);
 
+  let num = 1;
+
   const addToList = () => {
     setList([...list, add]);
     setCount(prev => prev + 1);
+    num++
   }
 
   //Filters matching name attribute 
@@ -50,13 +53,7 @@ export default function List() {
     // return <h1>{test}</h1>
   }
 
-// const test = (event) => {
-//   const y = document.getElementById('test')
-//   y.innerHTML = event.target.value
-// }
-
-  const parseList = list.map(lists => <h1 id={lists} className={lists} name={lists}> {lists} <button name={lists} onClick={remove}>Delete</button><button onClick={edit}></button><br /></h1> )
-
+  const parseList = list.map(lists => <h3 id={lists} className={lists} name={lists}> {num++}. {lists} <button name={lists} onClick={remove}>Delete</button><button onClick={edit}></button><br /></h3>)
   return(
     <div className="list-section">
       <form autoComplete="off" onSubmit={event => event.preventDefault()}>
