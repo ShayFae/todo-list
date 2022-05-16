@@ -1,5 +1,9 @@
 import { useState } from "react";
 import "./List.css"
+// import Test from './docs/blank-notebook-filler-paper-background-a-great-backdrop-to-let-your-creativity-loose-on-this-tiles-seamlessly-as-a-pattern_BYgYIKCBs_thumb.jpg'
+// import Im from './logo.svg'
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+
 
 export default function List() {
   const [list, setList] = useState([]);
@@ -33,19 +37,22 @@ export default function List() {
     // }}));
     // console.log('name', name)
     //Name is null need to find matching identifer to use conditional then make it equal to the prompt instead and set it to state.
-    setList(list.filter(lists => { if(lists !== name) {
-      c = true;
-      // console.log(lists)
-      // setList(list.filter(g => g !== name));
-      // list.push(test);
-      // console.log('this is lists', lists)
-      // console.log('yes')
-      document.getElementById(lists).innerText = 'testing';
+    // setList(list.filter(lists => { if(lists !== name) {
+    //   c = true;
+    //   // console.log(lists)
+    //   // setList(list.filter(g => g !== name));
+    //   // list.push(test);
+    //   // console.log('this is lists', lists)
+    //   // console.log('yes')
+    //   document.getElementById(lists).innerText = 'testing';
 
-    } }));
+    // } }));
     // console.log('this is lists2', list)
     if(c) {
+      alert("HI")
+
       console.log('true');
+      document.getElementsByName("meep").innerText = 'testing';
 
       // return console.log(<h1>{test}</h1>)
     }
@@ -53,9 +60,11 @@ export default function List() {
     // return <h1>{test}</h1>
   }
 
-  const parseList = list.map(lists => <h3 id={lists} className={lists} name={lists}> {num++}. {lists} <button name={lists} onClick={remove}>Delete</button><button onClick={edit}></button><br /></h3>)
+  <button name="meep" onClick={edit}></button>
+
+  const parseList = list.map(lists => <p id={lists} className={lists} name={lists}> {num++}. {lists} <button name={lists} onClick={remove}> <FontAwesomeIcon icon="trash-can" name={lists} onClick={() => remove}/><br /></button></p>)
   return(
-    <div className="list-section">
+    <div >
       <form autoComplete="off" onSubmit={event => event.preventDefault()}>
         <input
           name="list"
@@ -65,7 +74,13 @@ export default function List() {
         />
         <button onClick={addToList} type="submit">Add</button>
        </form> 
+       <div className="list-section">
+         {/* <img src={Test} /> */}
+         {/* <FontAwesomeIcon icon="trash-can" /> */}
+         {/* <FontAwesomeIcon icon="trash-can" onClick={() => remove}/> */}
+         {/* <button name={lists} onClick={remove}>Delete</button> */}
       {parseList}
+      </div>
     </div>
   );
 }

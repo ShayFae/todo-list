@@ -3,6 +3,11 @@
   flex-direction: column;
   align-items: center;
   margin-top: 100px;
+  background-color: white;
+  width: 500px;
+  /* background-image: url('./docs/blank-notebook-filler-paper-background-a-great-backdrop-to-let-your-creativity-loose-on-this-tiles-seamlessly-as-a-pattern_BYgYIKCBs_thumb.jpg'); */
+  justify-items: center;
+  background-image: url('https://www.ppt-backgrounds.net/thumbs/plain-writing-notebook-paper-photo-slides-backgrounds.jpg');
 }
 
 button {
