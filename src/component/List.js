@@ -72,7 +72,8 @@ export default function List() {
           value={add}
           onChange={(event) => {setAdd(event.target.value)}}          
         />
-        <button onClick={addToList} type="submit">Add</button>
+        <button onClick={addToList} type="submit"><FontAwesomeIcon icon="pencil" />
+</button>
        </form> 
        <div className="list-section">
          {/* <img src={Test} /> */}

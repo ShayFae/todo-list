@@ -17,3 +17,12 @@ button {
 .a {
   display: none;
 }
+
+input {
+  text-align: center;
+  background-color: #F5DEB3;
+  border: hidden;
+  width: 400px;
+  height: 20px;
+  margin: 50px;
+}

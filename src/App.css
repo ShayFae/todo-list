@@ -2,10 +2,13 @@ h1 {
   justify-content: center;
   display: flex;
   margin-top: 50px;
+  width: 50%;
 }
 
 body {
-  background-color: #ED9121;
+  /* background-color: #ED9121; */
+  background-color: #EFB261; 
+
 }
 
 div {
@@ -15,4 +18,13 @@ div {
   display: flex;
   justify-items: center;
   flex-direction: column;
+}
+
+mark {
+  /* background-color: #EFB261;  */
+  background-color: #ED9121; 
+  color: #F5DEB3;
+
+  border-radius: 50%;
+  width: 100%;
 }
