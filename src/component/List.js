@@ -1,7 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./List.css"
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-
 
 export default function List() {
   const [list, setList] = useState([]);
@@ -22,8 +21,13 @@ export default function List() {
     setList(list.filter(lists => lists !== name));
   }
 
-  //Messing with the delete function 
-  // <FontAwesomeIcon icon="trash-can"/>
+  const  deleteAll = () => {
+    setList([]);
+    if(list.length <= 0) {
+      alert("There's nothing to delete!")
+      // {React.createElement('p', {class: 'warning'}, "There's nothing to delete!")};
+    }
+  }
 
   const parseList = list.map(lists => <p id={lists} className={lists} name={lists}> {num++}. {lists}<button className="trash-icon" name={lists} onClick={remove} type="submit">❌</button></p>)
   return(
@@ -35,8 +39,8 @@ export default function List() {
           value={add}
           onChange={(event) => {setAdd(event.target.value)}}          
         />
-        <button className="pencil-icon" onClick={addToList} type="submit"><FontAwesomeIcon icon="pencil" size="lg"/>
-</button>
+        <button className="input-icons" onClick={addToList} type="submit"><FontAwesomeIcon icon="pencil" size="lg"/></button>
+        <button className="input-icons" onClick={deleteAll}><FontAwesomeIcon icon="trash-can" size="lg"/></button>
        </form> 
        <div className="list-section">
       {parseList}

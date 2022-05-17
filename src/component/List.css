@@ -23,12 +23,12 @@ input {
   align-items: center;
   margin-top: 20px;
   background-color: white;
-  width: 500px;
+  width: 550px;
   justify-items: center;
   background-image: url('https://www.ppt-backgrounds.net/thumbs/plain-writing-notebook-paper-photo-slides-backgrounds.jpg');
 }
 
-.pencil-icon {
+.input-icons {
   background-color: Transparent;
   border: none;
 }
