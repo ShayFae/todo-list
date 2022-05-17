@@ -1,13 +1,6 @@
-h1 {
-  justify-content: center;
-  display: flex;
-  margin-top: 50px;
-  width: 50%;
-}
-
+/* GLOBAL SELECTORS */
 body {
   background-color: #EFB261; 
-
 }
 
 div {
@@ -18,10 +11,17 @@ div {
   flex-direction: column;
 }
 
+h1 {
+  margin-left: 40px;
+  justify-content: center;
+  display: flex;
+  margin-top: 50px;
+  width: 50%;
+}
+
 mark {
   background-color: #ED9121; 
   color: #F5DEB3;
-
   border-radius: 50%;
   width: 100%;
   padding-top: 50px;

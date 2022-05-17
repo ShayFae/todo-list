@@ -1,28 +1,41 @@
-.list-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-  background-color: white;
-  width: 500px;
-  /* background-image: url('./docs/blank-notebook-filler-paper-background-a-great-backdrop-to-let-your-creativity-loose-on-this-tiles-seamlessly-as-a-pattern_BYgYIKCBs_thumb.jpg'); */
-  justify-items: center;
-  background-image: url('https://www.ppt-backgrounds.net/thumbs/plain-writing-notebook-paper-photo-slides-backgrounds.jpg');
-}
-
-button {
-  margin: 10px;
-}
-
-.a {
-  display: none;
-}
-
+/* GLOBAL SELECTORS */
 input {
   text-align: center;
   background-color: #F5DEB3;
   border: hidden;
+  /* border-radius:30%; */
+  border-radius: 25px;
   width: 400px;
-  height: 20px;
+  height: 40px;
   margin: 50px;
+  margin-right: 10px;
+  /* position: fixed; */
 }
+
+/* CLASSES */
+.a {
+  display: none;
+}
+
+.list-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background-color: white;
+  width: 500px;
+  justify-items: center;
+  background-image: url('https://www.ppt-backgrounds.net/thumbs/plain-writing-notebook-paper-photo-slides-backgrounds.jpg');
+}
+
+.pencil-icon {
+  background-color: Transparent;
+  border: none;
+}
+
+.trash-icon {
+    margin: 10px;
+    background-color: Transparent;
+    border: none;
+}
+

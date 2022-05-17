@@ -25,7 +25,7 @@ export default function List() {
   //Messing with the delete function 
   // <FontAwesomeIcon icon="trash-can"/>
 
-  const parseList = list.map(lists => <p id={lists} className={lists} name={lists}> {num++}. {lists}<button name={lists} onClick={remove}><br/></button></p>)
+  const parseList = list.map(lists => <p id={lists} className={lists} name={lists}> {num++}. {lists}<button className="trash-icon" name={lists} onClick={remove} type="submit">❌</button></p>)
   return(
     <div >
       <form autoComplete="off" onSubmit={event => event.preventDefault()}>
@@ -35,7 +35,7 @@ export default function List() {
           value={add}
           onChange={(event) => {setAdd(event.target.value)}}          
         />
-        <button onClick={addToList} type="submit"><FontAwesomeIcon icon="pencil" />
+        <button className="pencil-icon" onClick={addToList} type="submit"><FontAwesomeIcon icon="pencil" size="lg"/>
 </button>
        </form> 
        <div className="list-section">
