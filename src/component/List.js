@@ -22,11 +22,10 @@ export default function List() {
   }
 
   const  deleteAll = () => {
-    setList([]);
     if(list.length <= 0) {
       alert("There's nothing to delete!")
       // {React.createElement('p', {class: 'warning'}, "There's nothing to delete!")};
-    }
+    } else if (window.confirm('This will delete all notes')) setList([]) 
   }
 
   const parseList = list.map(lists => <p id={lists} className={lists} name={lists}> {num++}. {lists}<button className="trash-icon" name={lists} onClick={remove} type="submit">❌</button></p>)
